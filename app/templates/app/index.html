@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<p>物語の開始の文は：{{ storybone.starttext }}</p>
+{% for story in storys %}
+<div>
+    {{ story.text }}
+    {% if story.is_finish == 'true' %}
+        <p>ここで物語は終了するようです・・・</p>
+    {% endif %}
+</div>
+{% endfor %}
+<p>物語の終了の文は：{{ storybone.lasttext }}</p>
+{% endblock %}

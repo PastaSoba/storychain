@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+{% block content %}
+
+<p>マスター用ページです</p>
+<form action="{% url 'app:master' %}" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th>はじめの文</th>
+                <td>{{ form.starttext }}</td>
+            </tr>
+            <tr>
+                <th>最後の文</th>
+                <td>{{ form.lasttext }}</td>
+            </tr>
+        </table>
+        <button type="submit" class="btn">作成</button>
+</form>
+{% endblock %}
