@@ -1,7 +1,8 @@
 {% extends 'app/base.html' %}
 {% block content %}
 
-<p>物語の開始の文は：{{ storybone.starttext }}</p>
+<p>物語の開始の文は：<br>
+    {{ storybone.starttext }}</p>
 {% for story in storys %}
 <div>
     {{ story.text }}
@@ -10,5 +11,6 @@
     {% endif %}
 </div>
 {% endfor %}
-<p>物語の終了の文は：{{ storybone.lasttext }}</p>
+<p>物語の終了の文は：<br>
+    {{ storybone.lasttext }}</p>
 {% endblock %}
